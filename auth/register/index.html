@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noroff FED2 JS2 CA</title>
+    <script type="module" crossorigin src="../../assets/app-D11l-6PI.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/app-bb_VWT7W.css">
+  </head>
+
+  <body>
+    <main class="flex justify-center items-center min-h-screen">
+      <div
+        class="flex min-h-full w-full flex-col justify-center px-6 py-12 lg:px-8 gap-4"
+      >
+        <div
+          class="sm:mx-auto sm:w-full sm:max-w-sm flex justify-center flex-col"
+        >
+          <a href="/">
+            <img
+              class="mx-auto h-10 w-auto"
+              src="../../images/noroff-logo.png"
+              alt="Noroff Logo"
+            />
+          </a>
+          <h2
+            class="flex justify-center mt-10 text-2xl font-bold tracking-tight text-gray-900 w-full"
+          >
+            Register your account
+          </h2>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form name="register" class="flex flex-col space-y-6">
+            <div>
+              <label
+                for="name"
+                class="auth-label block text-sm font-medium text-gray-900"
+                >Name</label
+              >
+              <div class="mt-2">
+                <input
+                  id="name"
+                  type="name"
+                  name="name"
+                  required
+                  maxlength="20"
+                  pattern="^[\w]+$"
+                  title="Please enter a username using only letters and numbers"
+                  required
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="email"
+                class="auth-label block text-sm font-medium text-gray-900"
+                >Email address</label
+              >
+              <div class="mt-2">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                  title="Please enter a valid noroff.no or stud.noroff.no address"
+                  required
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between">
+                <label
+                  for="password"
+                  class="auth-label block text-sm font-medium text-gray-900"
+                  >Password</label
+                >
+              </div>
+              <div class="mt-2">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  minlength="8"
+                  required
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Register
+              </button>
+            </div>
+          </form>
+
+          <p class="auth-footer mt-10 text-center text-sm/6 text-gray-500">
+            Already have an account?
+            <a
+              href="/auth/login/"
+              class="font-semibold text-indigo-600 hover:text-indigo-500"
+              >Login</a
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- <main>
+      <div class="container">
+        <section class="registration">
+          <div class="auth-container">
+            <div class="registration__content">
+              <a clas="site-logo" href="/">
+                <img
+                  class="logo-auth"
+                  src="/images/noroff-logo.png"
+                  alt="Noroff Logo"
+                />
+              </a>
+            </div>
+            <div class="register">
+              <form name="register">
+                <div class="field mb-3">
+                  <label class="field__label" for="name">Name</label>
+                  <input
+                    class="textfield"
+                    id="name"
+                    type="name"
+                    name="name"
+                    required
+                    maxlength="20"
+                    pattern="^[\w]+$"
+                    title="Please enter a username using only letters and numbers"
+                  />
+                </div>
+
+                <div class="field mb-3">
+                  <label class="field__label" for="email">Email</label>
+                  <input
+                    class="textfield"
+                    id="email"
+                    type="email"
+                    name="email"
+                    pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                    title="Please enter a valid noroff.no or stud.noroff.no address"
+                    required
+                  />
+                </div>
+
+                <div class="field mb-3">
+                  <label class="field__label" for="password">Password</label>
+                  <input
+                    class="textfield"
+                    type="password"
+                    name="password"
+                    id="password"
+                    minlength="8"
+                    required
+                  />
+                </div>
+                <div class="actions pt-3">
+                  <button class="btn btn-solid btn-primary">Register</button>
+                </div>
+              </form>
+            </div>
+            <div class="footer-auth">
+              <p class="pb-6">
+                Already have an account?
+                <a class="link" href="/auth/login/">Log in.</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main> -->
+  </body>
+</html>
